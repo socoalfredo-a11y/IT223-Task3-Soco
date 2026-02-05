@@ -1,0 +1,27 @@
+<?php
+    include 'db.php';
+    $sql = "SELECT UPPER(first_name) AS name FROM employees";
+    $result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html>
+<head><title>UPPER() result</title></head>
+<body>
+
+    <h2>UPPER() — First Names Uppercase</h2>
+    <p>Query: <code>SELECT UPPER(first_name) AS name FROM employees</code></p>
+    <ul>
+    <?php
+        if ($result && $result->num_rows > 0) {
+            while ($r = $result->fetch_assoc()) {
+                echo '<li>' . htmlspecialchars($r['name']) . '</li>';
+            }
+        } else {
+            echo '<li>(no rows)</li>';
+        }
+    ?>
+    </ul>
+    
+</body>
+</html>

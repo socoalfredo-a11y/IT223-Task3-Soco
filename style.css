@@ -1,0 +1,152 @@
+/* ==============================
+   Global Reset & Variables
+============================== */
+:root {
+    --bg-main: #f9fafb;          /* off-white background */
+    --bg-surface: #ffffff;       /* cards / table surface */
+    --text-main: #2f2f2f;        /* soft charcoal */
+    --text-muted: #6b7280;       /* muted gray */
+    --accent: #4f5bd5;           /* muted indigo */
+    --accent-hover: #3f49b5;
+    --border-light: #e5e7eb;
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --radius: 10px;
+}
+
+/* ==============================
+   Base Styles
+============================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: Inter, Poppins, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==============================
+   Headings
+============================== */
+h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* ==============================
+   Links
+============================== */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* ==============================
+   Table Layout
+============================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    font-size: 14px;
+}
+
+/* Table Head */
+th {
+    text-align: left;
+    padding: 14px 16px;
+    background-color: #f3f4f6;
+    color: var(--text-main);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Section Headers */
+th[colspan] {
+    background-color: #eef2ff;
+    color: #3730a3;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Table Body */
+td {
+    padding: 14px 16px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-main);
+}
+
+/* Zebra Striping (very subtle) */
+tr:nth-child(even) td {
+    background-color: #fcfcfd;
+}
+
+/* ==============================
+   Code Blocks
+============================== */
+code {
+    display: block;
+    padding: 10px 12px;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 13px;
+    color: #1f2937;
+    white-space: pre-wrap;
+}
+
+/* ==============================
+   Buttons (if used later)
+============================== */
+button {
+    background-color: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+  table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #333; padding: 8px; vertical-align: top; }
+        th { background-color: #f2f2f2; }
+        code { background:#f7f7f7; padding:2px 4px; display:block; white-space:pre; }
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+
